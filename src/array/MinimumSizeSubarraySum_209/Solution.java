@@ -19,10 +19,10 @@ public class Solution {
         while (j < nums.length) {
             if (sum + nums[j] >= s) {
                 sum = sum - nums[i];
-                min =Math.min(min, (j-i + 1));
+                min = Math.min(min, (j - i + 1));
                 i++;
             } else {
-                sum+=nums[j];
+                sum += nums[j];
                 j++;
             }
         }
