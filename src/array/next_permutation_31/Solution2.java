@@ -27,25 +27,20 @@ public class Solution2 {
         int i=nums.length-1;
         // looking for the suffix
         while (i>0 && nums[i-1]>=nums[i]) i--;
-
         // number can not be increased
         if (i==0) {
             Arrays.sort(nums);
             return;
         }
-
         // nums[i] - is the head of suffix,
         // nums[i-1] - is the pivot
         int pivot = nums[i-1];
-
         // looking for the target to swap - first element in suffix greater than pivot
         // from right to left
         int j=nums.length-1;
         while (j>i && nums[j]<=pivot) j--;
-
         // swap target and pivot
         swap(nums, i-1, j);
-
         // revers suffix
         j=nums.length-1;
         while (i<j) {

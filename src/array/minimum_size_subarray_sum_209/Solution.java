@@ -1,4 +1,4 @@
-package array.MinimumSizeSubarraySum_209;
+package array.minimum_size_subarray_sum_209;
 
 /**
  * 209. Minimum Size Subarray Sum
