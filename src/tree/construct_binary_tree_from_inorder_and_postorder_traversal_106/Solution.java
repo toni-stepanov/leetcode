@@ -31,7 +31,7 @@ package tree.construct_binary_tree_from_inorder_and_postorder_traversal_106;
 
 // O(n*log n) time complexity, O(n) space complexity.
 public class Solution {
-    public TreeNode buildTree(int[] inorder, int[] postorder) {
+    TreeNode buildTree(int[] inorder, int[] postorder) {
         if (inorder.length == 0 || postorder.length == 0 || postorder.length != inorder.length) return null;
         int left = 0;
         int right = inorder.length-1;
