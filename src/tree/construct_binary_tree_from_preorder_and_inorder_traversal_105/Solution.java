@@ -1,4 +1,4 @@
-package tree.construct_Binary_tree_from_preorder_and_inorder_traversal_105;
+package tree.construct_binary_tree_from_preorder_and_inorder_traversal_105;
 
 /**
  * 105. Construct Binary Tree from Preorder and Inorder Traversal

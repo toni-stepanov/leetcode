@@ -1,4 +1,4 @@
-package tree.construct_Binary_tree_from_preorder_and_inorder_traversal_105;
+package tree.construct_binary_tree_from_preorder_and_inorder_traversal_105;
 
 public class Main {
     public static void main(String[] args) {
