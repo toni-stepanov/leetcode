@@ -1,9 +1,9 @@
-package dp.IntegerBreak_343;
+package bit_manipulation.SumOfTwoIntegers_371;
 
 public class Main {
     public static void main(String[] args) {
         Solution s = new Solution();
-        int result = s.integerBreak2(10) ;
+        int result = s.getSum(20, 30);
         System.out.println(result);
     }
 }

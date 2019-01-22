@@ -1,9 +1,12 @@
-package dp.IntegerBreak_343;
+package dp.longest_increasing_subsequence_300;
 
 public class Main {
     public static void main(String[] args) {
         Solution s = new Solution();
-        int result = s.integerBreak2(10) ;
+        int[] nums = {10, 9, 2, 5, 3, 7, 101, 18};
+        int result = s.lengthOfLIS(nums) ;
         System.out.println(result);
     }
 }
+
+

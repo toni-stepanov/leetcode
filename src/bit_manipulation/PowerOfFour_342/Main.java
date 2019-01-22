@@ -1,9 +1,9 @@
-package dp.IntegerBreak_343;
+package bit_manipulation.PowerOfFour_342;
 
 public class Main {
     public static void main(String[] args) {
         Solution s = new Solution();
-        int result = s.integerBreak2(10) ;
+        boolean result = s.isPowerOfFour3(3) ;
         System.out.println(result);
     }
 }

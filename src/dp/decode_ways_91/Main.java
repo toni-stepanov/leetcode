@@ -1,9 +1,11 @@
-package dp.IntegerBreak_343;
+package dp.decode_ways_91;
 
 public class Main {
     public static void main(String[] args) {
         Solution s = new Solution();
-        int result = s.integerBreak2(10) ;
-        System.out.println(result);
+        int result = s.numDecodings("123");
+        System.out.print(result);
     }
 }
+
+
