@@ -1,4 +1,4 @@
-package tree.binary_tree_level_order_traversal2_107;
+package tree.binary_tree_longest_consecutive_sequence_298;
 
 public class TreeNode {
     int val;
@@ -8,7 +8,6 @@ public class TreeNode {
 
     @Override
     public String toString() {
-
         String leftStr = this.left != null ? this.left.toString() : "NULL";
         String rightStr = this.right != null ? this.right.toString() : "NULL";
         return "ROOT: " + val + " LEFT: " + leftStr + " RIGHT: " + rightStr;
