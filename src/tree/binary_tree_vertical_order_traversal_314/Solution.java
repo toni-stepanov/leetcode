@@ -38,14 +38,14 @@ public class Solution {
         return convertMapToList();
     }
 
-
-    public List<List<Integer>> verticalOrder1(TreeNode root) {
+    // doesn't work!!!
+    // dfs gives wrong result needed bfs
+    List<List<Integer>> verticalOrder2(TreeNode root) {
         if (root == null) return new ArrayList<>();
         dfs(0, root);
         return convertMapToList();
     }
 
-    // dfs gives wrong result needed bfs
     private void dfs(int level, TreeNode current) {
         if (current == null) return;
         add(level, current.val);
