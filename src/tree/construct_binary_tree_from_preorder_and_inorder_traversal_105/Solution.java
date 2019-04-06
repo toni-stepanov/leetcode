@@ -31,7 +31,6 @@ public class Solution {
         int rootValue = preorder[preordRootInd];
         int inordRootInd = findIndex(inorder, inordLeftInd, inordRightInd, rootValue);
         int leftTreeLength = inordRootInd - inordLeftInd;
-
         TreeNode root = new TreeNode(rootValue);
         root.left = build(preorder, inorder, inordLeftInd, inordRootInd-1, preordRootInd+1);
         root.right = build(preorder, inorder, inordRootInd+1, inordRightInd, preordRootInd+leftTreeLength+1);
