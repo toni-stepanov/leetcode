@@ -19,34 +19,11 @@ package array.search_insert_position_35;
 public class Solution {
 
     int searchInsert(int[] nums, int target) {
-        return search(nums, 0, nums.length - 1, target);
-    }
-
-    private int search(int[] nums, int l, int r, int target) {
-        if (l == r) {
-            if (nums[l] > target) {
-                return l == 0 ? 0 : l - 1;
-            } else {
-                return l + 1;
-            }
-        }
-        int mid = r + (l - r) / 2;
-        if (mid == target) {
-            return mid;
-        } else if (mid > target) {
-            return search(nums, l, mid - 1, target);
-        } else {
-            return search(nums, mid + 1, r, target);
-        }
-
-    }
-
-    public int searchInsert2(int[] nums, int target) {
         int left = 0;
-        int rigth = nums.length - 1;
-        while (left < rigth) {
-            int mid = left + (rigth - left) / 2;
-            if (nums[mid] > target) rigth = mid - 1;
+        int right = nums.length - 1;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] > target) right = mid - 1;
             else if (nums[mid] < target) left = mid + 1;
             else return mid;
         }

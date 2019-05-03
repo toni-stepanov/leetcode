@@ -12,7 +12,7 @@ public class Graph {
     public Graph(int size) {
         this.size = size;
         adjList = new List[size];
-        for (int i=0; i<size; i++) {
+        for (int i = 0; i < size; i++) {
             adjList[i] = new LinkedList<>();
         }
     }
@@ -33,7 +33,7 @@ public class Graph {
         res.add(current);
         for (int i : adjList[current]) {
             if (!visited[i]) {
-                res.add(i);
+                dfsRecursive(i, visited, res);
             }
         }
     }
@@ -47,7 +47,7 @@ public class Graph {
         while (!stack.isEmpty()) {
             int curr = stack.pop();
             result.add(curr);
-            for(int a : adjList[curr]) {
+            for (int a : adjList[curr]) {
                 if (!visited[a]) {
                     visited[a] = true;
                     stack.push(a);
@@ -66,7 +66,7 @@ public class Graph {
         while (!queue.isEmpty()) {
             int curr = queue.remove();
             result.add(curr);
-            for (int a:adjList[curr]) {
+            for (int a : adjList[curr]) {
                 if (!visited[a]) {
                     visited[a] = true;
                     queue.add(a);

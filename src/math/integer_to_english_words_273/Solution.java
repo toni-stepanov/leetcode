@@ -22,19 +22,17 @@ public class Solution {
     private final String[] TENS = {"", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"};
     private final String[] THOUSANDS = {"", "Thousand", "Million", "Billion"};
 
-    public String numberToWords(int num) {
+    String numberToWords(int num) {
         if (num == 0) return "Zero";
         int i = 0;
         StringBuilder result = new StringBuilder();
         while (num > 0) {
             int part = num % 1000;
             String strPart = helper(part);
-
             if (i > 0 && strPart.length() > 0) {
                 result.insert(0, THOUSANDS[i] + " ");
             }
             result.insert(0, strPart);
-
             i++;
             num /= 1000;
         }
@@ -48,7 +46,6 @@ public class Solution {
             sb.append(LESS_THAN_20[hundreds]).append(" Hundred ");
             part %= 100;
         }
-
         if (part > 0 && part < 20) {
             sb.append(LESS_THAN_20[part] + " ");
         } else {

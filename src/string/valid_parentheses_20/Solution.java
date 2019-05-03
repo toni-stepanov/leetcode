@@ -11,7 +11,7 @@ Given a string containing just the characters '(', ')', '{', '}', '[' and ']', d
 The brackets must close in the correct order, "()" and "()[]{}" are all valid but "(]" and "([)]" are not.
 */
 public class Solution {
-    public boolean isValid(String s) {
+    boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
         for (int i=0; i< s.length(); i++) {
             switch(s.charAt(i)) {
@@ -31,8 +31,6 @@ public class Solution {
                     break;
             }
         }
-
-        if(!stack.isEmpty()) return false;
-        return true;
+        return stack.isEmpty();
     }
 }

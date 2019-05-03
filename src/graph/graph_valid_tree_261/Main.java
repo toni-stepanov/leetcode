@@ -1,4 +1,4 @@
-package graph.Graph_Valid_tree_261;
+package graph.graph_valid_tree_261;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,7 +1,5 @@
 package string.basic_calculator2_227;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 /*

@@ -11,36 +11,27 @@ package array.merge_sorted_array_88;
  * You may assume that nums1 has enough space (size that is greater or equal to m + n) to hold additional elements
  * from nums2. The number of elements initialized in nums1 and nums2 are m and n respectively.
  */
-class Solution {
+public class Solution {
 
     void merge(int[] nums1, int m, int[] nums2, int n) {
-        int ind1 = nums1.length - 1;
-        int ind2 = m - 1;
-        if (ind1 == 0) {
-            ind2 = 0;
-        }
-        int ind3 = n - 1;
-        while (ind1 >= 0 && (ind2 >= 0 || ind3 >= 0)) {
-            if (ind2 < 0) {
-                nums1[ind1] = nums2[ind3];
-                ind3--;
-            } else if (ind3 < 0) {
-                int temp = nums1[ind2];
-                nums1[ind2] = 0;
-                nums1[ind1] = temp;
-                ind2--;
+        if (nums2.length == 0) return;
+        int p = m-1;
+        int q = n-1;
+        int i = nums1.length - 1;
+        while (p>=0 && q>=0) {
+            if (nums1[p]>nums2[q]) {
+                nums1[i] = nums1[p];
+                p--;
             } else {
-                if (nums1[ind2] > nums2[ind3]) {
-                    int temp = nums1[ind2];
-                    nums1[ind2] = 0;
-                    nums1[ind1] = temp;
-                    ind2--;
-                } else {
-                    nums1[ind1] = nums2[ind3];
-                    ind3--;
-                }
+                nums1[i]=nums2[q];
+                q--;
             }
-            ind1--;
+            i--;
+        }
+        while(q>=0) {
+            nums1[i]=nums2[q];
+            q--;
+            i--;
         }
     }
 
