@@ -40,7 +40,7 @@ public class Solution {
         return reverseListRecursive(null, head);
     }
 
-    ListNode reverseListRecursive(ListNode prev, ListNode head) {
+    private ListNode reverseListRecursive(ListNode prev, ListNode head) {
         if (head == null) {
             return prev;
         }

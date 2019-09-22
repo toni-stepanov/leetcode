@@ -24,9 +24,10 @@ import java.util.List;
  */
 //https://discuss.leetcode.com/topic/37962/fast-easy-java-code-with-explanation
 public class Solution {
+
     List<List<Integer>> combinationSum3(int k, int n) {
         List<List<Integer>> result = new ArrayList<>();
-        combination(result, new ArrayList<Integer>(), k,n,1);
+        combination(result, new ArrayList<>(), k,n,1);
         return result;
     }
 

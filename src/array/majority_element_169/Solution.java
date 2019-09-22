@@ -16,7 +16,7 @@ public class  Solution {
     // Different implementation.
     // https://discuss.leetcode.com/topic/28601/java-solutions-sorting-hashmap-moore-voting-bit-manipulation
     // https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_majority_vote_algorithm - Boyer–Moore majority vote algorithm
-    public int majorityElement(int[] nums) {
+    int majorityElement(int[] nums) {
         int count = 0;
         int candidate = nums[0];
         for (int c : nums) {

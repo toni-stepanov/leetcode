@@ -11,7 +11,8 @@ Reverse bits of a given 32 bits unsigned integer.
 
 For example, given input 43261596 (represented in binary as 00000010100101000001111010011100),
 return 964176192 (represented in binary as 00111001011110000010100101000000).
-
+00000010100101000001111010011100
+00111001011110000010100101000000
 Follow up:
 If this function is called many times, how would you optimize it?
 */
@@ -31,9 +32,7 @@ public class Solution {
         return result;
     }
 
-
     // cache
-    private final Map<Byte, Integer> cache = new HashMap<Byte, Integer>();
     public int reverseBits2(int n) {
         byte[] bytes = new byte[4];
         for (int i = 0; i < 4; i++) // convert int into 4 bytes
@@ -47,6 +46,7 @@ public class Solution {
         return result;
     }
 
+    private final Map<Byte, Integer> cache = new HashMap<>();
     private int reverseByte(byte b) {
         Integer value = cache.get(b); // first look up from cache
         if (value != null)

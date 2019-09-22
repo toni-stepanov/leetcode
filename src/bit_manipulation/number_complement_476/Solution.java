@@ -32,7 +32,6 @@ public class Solution {
         // mask:   highestOneBit << 1   =>   0100 << 1   =>   1000
         // mask "-1":    1000 - 1  == 0111
         int mask = (Integer.highestOneBit(num) << 1) - 1;
-
         // ~num   =>   5 is 0101  =>   ~5 is 1010, but we need only last 3 bits
         // ~num & mask    =>    1010 & 0111 == 0010    =>   res = 2
         return ~num & mask;

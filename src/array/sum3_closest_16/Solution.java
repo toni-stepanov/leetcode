@@ -15,21 +15,6 @@ import java.util.Arrays;
 public class Solution {
 
     int threeSumClosest(int[] nums, int target) {
-        int diff = Integer.MAX_VALUE;
-        int sum = 0;
-        int p = 0;
-        while ((p + 3) <= nums.length) {
-            int abs = Math.abs(target - (nums[p] + nums[p + 1] + nums[p + 2]));
-            if (abs < diff) {
-                diff = abs;
-                sum = nums[p] + nums[p + 1] + nums[p + 2];
-            }
-            p++;
-        }
-        return sum;
-    }
-
-    int threeSumClosest2(int[] nums, int target) {
         if (nums.length < 4) {
             int res = 0;
             for(int i : nums) {

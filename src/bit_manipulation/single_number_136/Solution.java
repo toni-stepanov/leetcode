@@ -10,10 +10,10 @@ public class Solution {
     //  A XOR A = 0 and the XOR operator is commutative.
     // Time complexity O(n) space complexity O(1)
     int singleNumber(int[] nums) {
-        int temp = 0;
+        int ret = 0;
         for(int i : nums) {
-            temp ^= i;
+            ret ^= i;
         }
-        return temp;
+        return ret;
     }
 }

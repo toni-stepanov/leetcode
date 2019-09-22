@@ -29,14 +29,11 @@ public class Solution {
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return false;
         }
-
         int m = matrix.length;
         int n= matrix[0].length;
-
         if (target < matrix[0][0] || target > matrix[m-1][n-1]) {
             return false;
         }
-
         int lo = 0;
         int hi = m-1;
         while (lo <= hi) {
@@ -81,7 +78,7 @@ public class Solution {
 // Great solution, treating matrix as array, time complexity O(log(n+m)), is better than O(log n + log m)
 // https://discuss.leetcode.com/topic/3227/don-t-treat-it-as-a-2d-matrix-just-treat-it-as-a-sorted-list
 // https://discuss.leetcode.com/topic/51589/two-java-solutons-o-log-m-n-is-better-than-o-log-m-log-n - good description
-//    class Solution {
+//    class SnapshotArray {
 //        public:
 //        bool searchMatrix(vector<vector<int> > &matrix, int target) {
 //            int n = matrix.size();

@@ -9,7 +9,7 @@ The returned array must be in sorted order.
 Expected time complexity: O(n)
 */
 class Solution {
-    public int[] sortTransformedArray(int[] nums, int a, int b, int c) {
+    int[] sortTransformedArray(int[] nums, int a, int b, int c) {
         int n = nums.length;
         int[] sorted = new int[n];
         int i = 0, j = n - 1;

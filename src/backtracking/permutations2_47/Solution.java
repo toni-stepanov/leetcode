@@ -25,34 +25,34 @@ public class Solution {
     List<List<Integer>> permuteUnique(int[] nums) {
         List<List<Integer>> resList = new ArrayList<>();
         List<Integer> pmtList = new ArrayList<>();
-        List<Integer> numsList = new ArrayList<>();  // Decision space:  store nums left
+        List<Integer> source = new ArrayList<>();  // Decision space:  store nums left
         Arrays.sort(nums);
         for(int i : nums)
         {
-            numsList.add(i);
+            source.add(i);
         }
-
-        buildPermute(resList, pmtList, numsList);
+        buildPermute(resList, pmtList, source);
         return resList;
     }
 
-    private void buildPermute(List<List<Integer>> resList, List<Integer> pmtList, List<Integer> numsList)
+    private void buildPermute(List<List<Integer>> resList, List<Integer> current, List<Integer> source)
     {
         //base case
-        if( numsList.size() == 0)
+        if( source.isEmpty())
         {
-            resList.add(pmtList);
+            resList.add(current);
             return;
         }
-
-        for(int i=0; i < numsList.size(); i++)
+        for(int i=0; i < source.size(); i++)
         {
-            if( i > 0 && numsList.get(i) == numsList.get(i-1))  continue; // skip duplicates
-            List<Integer> newPmtList= new ArrayList<Integer>(pmtList);
-            newPmtList.add(numsList.get(i));
-            List<Integer> newNumsList= new ArrayList<Integer>(numsList);
-            newNumsList.remove(i);
-            buildPermute(resList, newPmtList, newNumsList);
+            if( i > 0 && source.get(i).equals(source.get(i - 1)))  {
+                continue;
+            } // skip duplicates
+            List<Integer> newCurrent= new ArrayList<>(current);
+            newCurrent.add(source.get(i));
+            List<Integer> newSource = new ArrayList<>(source);
+            newSource.remove(i);
+            buildPermute(resList, newCurrent, newSource);
         }
     }
 }

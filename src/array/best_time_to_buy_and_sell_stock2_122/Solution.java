@@ -11,7 +11,6 @@ package array.best_time_to_buy_and_sell_stock2_122;
  (ie, you must sell the stock before you buy again).
  */
 public class Solution {
-
     // simple every-day buy-sell solution
     int maxProfit(int[] prices) {
         int profit = 0;

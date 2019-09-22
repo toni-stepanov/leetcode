@@ -10,7 +10,7 @@ package array.find_peak_162;
 
 public class Solution {
 
-    public int findPeakElement(int[] nums) {
+    int findPeakElement(int[] nums) {
         return search(nums, 0, nums.length - 1);
     }
 

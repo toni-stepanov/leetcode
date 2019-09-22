@@ -36,13 +36,13 @@ public class Solution {
                 if (c == ret.charAt(j)) {
                     counter++;
                 } else {
-                    newRet.append(counter).append(String.valueOf(c));
+                    newRet.append(counter).append(c);
                     counter = 1;
                     c = ret.charAt(j);
                 }
             }
             if (counter != 0) {
-                newRet.append(counter).append(String.valueOf(c));
+                newRet.append(counter).append(c);
             }
             if (!newRet.toString().equals("")) {
                 ret = newRet.toString();

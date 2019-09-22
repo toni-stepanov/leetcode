@@ -24,10 +24,10 @@ Explanation:
 'e' is the letter that was added.
 */
 public class Solution {
-    public char findTheDifference(String s, String t) {
+    char findTheDifference(String s, String t) {
         int buff = 0;
-        for(char c : t.toCharArray()) buff ^= (int)c;
-        for(char c : s.toCharArray()) buff ^= (int)c;
-        return (char)buff;
+        for (char c : t.toCharArray()) buff ^= (int) c;
+        for (char c : s.toCharArray()) buff ^= (int) c;
+        return (char) buff;
     }
 }

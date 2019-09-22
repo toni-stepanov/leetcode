@@ -30,16 +30,16 @@ public class Solution {
     // https://discuss.leetcode.com/topic/6104/my-accepted-15-lines-of-code-for-java
     public int reverse(int x) {
         int res = 0;
-        int sign = (x<0) ? -1 : 1;
-        x=x*sign;
-        while (x>0) {
-            int rem = x%10;
-            x=x/10;
-            double max = (Integer.MAX_VALUE-rem)/10;
+        int sign = (x < 0) ? -1 : 1;
+        x = x * sign;
+        while (x > 0) {
+            int rem = x % 10;
+            x = x / 10;
+            double max = (Integer.MAX_VALUE - rem) / 10;
             if (res > max) return 0;
-            res = res*10 + rem;
+            res = res * 10 + rem;
         }
-        return res*sign;
+        return res * sign;
     }
 
     public int reverse2(int x) {
@@ -47,11 +47,9 @@ public class Solution {
         StringBuilder strRet = new StringBuilder();
         int sign = 1;
         int ret = 0;
-        for (int i=str.length() - 1; i>=0; i--) {
+        for (int i = str.length() - 1; i >= 0; i--) {
             char c = str.charAt(i);
-            if (c == '0' &&  (c == '+' || strRet.equals(""))) {
-                continue;
-            } else if (c == '-') {
+            if (c == '-') {
                 sign = -1;
             } else {
                 strRet.append(c);
@@ -62,9 +60,7 @@ public class Solution {
             if (!s.equals("")) {
                 ret = Integer.parseInt(s) * sign;
             }
-        }
-        catch (NumberFormatException e) {
-            ret = 0;
+        } catch (NumberFormatException ignored) {
         }
         return ret;
     }

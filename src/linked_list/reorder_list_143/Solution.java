@@ -22,7 +22,6 @@ Given {1,2,3,4}, reorder it to {1,4,2,3}.
  * }
  */
 public class Solution {
-
     // 1. find middle with two pointers
     // 2. reverse second half
     // 3. merge two lists.
@@ -94,7 +93,6 @@ public class Solution {
             ListNode next2 = head2.next;
             head1.next = head2;
             head2.next = next1;
-
             head1 = next1;
             head2 = next2;
         }

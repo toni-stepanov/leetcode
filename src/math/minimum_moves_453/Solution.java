@@ -17,7 +17,7 @@ Only three moves are needed (remember each move increments two elements):
 **/
 class Solution {
 
-    public int minMoves(int[] nums) {
+    int minMoves(int[] nums) {
         int min = Integer.MAX_VALUE;
         for (int num:nums) {
             if (num < min) {

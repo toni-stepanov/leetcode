@@ -11,20 +11,20 @@ public class Solution {
     // Iterative solution
     // Time complexity O(log n)
     public boolean isPowerOfTwo1(int n) {
-        while (n%2 == 0 && n>1) {
+        while (n % 2 == 0 && n > 1) {
             n /= 2;
         }
         return n == 1;
     }
 
     //Recursive
-    public boolean isPowerOfTwo2(int n) {
-        return (n == 1) || (n%2 == 0 && isPowerOfTwo2(n/2));
+    boolean isPowerOfTwo2(int n) {
+        return (n == 1) || (n % 2 == 0 && isPowerOfTwo2(n / 2));
     }
 
     // Bit operation x&(x-1) trick
-    public boolean isPowerOfTwo3(int n) {
-        return (n > 0) && ((n&(n-1)) == 0);
+    boolean isPowerOfTwo3(int n) {
+        return (n > 0) && ((n & (n - 1)) == 0);
     }
 
     // Bit operation x&(~x+1) trick

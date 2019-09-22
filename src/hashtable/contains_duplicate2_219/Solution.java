@@ -16,12 +16,12 @@ nums[i] = nums[j] and the difference between i and j is at most k.
 // Time complexity O(n), space complexity O(n).
 public class Solution {
 
-    public boolean containsNearbyDuplicate2(int[] nums, int k) {
+    boolean containsNearbyDuplicate2(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
-        for(int i=0; i<nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             if (map.containsKey(nums[i])) {
                 int index = map.get(nums[i]);
-                if(i - index <= k) return true;
+                if (i - index <= k) return true;
                 map.remove(nums[i]);
                 map.put(nums[i], i);
             } else {
@@ -30,10 +30,11 @@ public class Solution {
         }
         return false;
     }
+
     public boolean containsNearbyDuplicate(int[] nums, int k) {
         if (nums.length < 2 || k < 1) return false;
         HashMap<Integer, Integer> map = new HashMap<>();
-        for(int i=0; i<nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             int current = nums[i];
             Integer saved = map.get(current);
             if (saved != null && Math.abs(i - saved) <= k) return true;
@@ -50,7 +51,7 @@ public class Solution {
             }
             set.add(nums[i]);
             if (set.size() > k) {
-                set.remove(nums[i-k]);
+                set.remove(nums[i - k]);
             }
         }
         return false;

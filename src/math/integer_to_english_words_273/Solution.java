@@ -47,14 +47,13 @@ public class Solution {
             part %= 100;
         }
         if (part > 0 && part < 20) {
-            sb.append(LESS_THAN_20[part] + " ");
+            sb.append(LESS_THAN_20[part]).append(" ");
         } else {
             int tens = part / 10;
             if (tens > 0) {
                 sb.append(TENS[tens]).append(" ");
                 part %= 10;
             }
-
             if (part > 0) {
                 sb.append(LESS_THAN_20[part]).append(" ");
             }

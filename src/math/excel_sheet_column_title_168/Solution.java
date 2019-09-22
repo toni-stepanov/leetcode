@@ -20,11 +20,11 @@ public class Solution {
     // Good explanation
     // https://discuss.leetcode.com/topic/35360/my-easy-to-understand-java-solution/4
     String convertToTitle(int n) {
-        if(n <= 0){
+        if (n <= 0) {
             throw new IllegalArgumentException("Input is not valid!");
         }
         StringBuilder sb = new StringBuilder();
-        while(n > 0){
+        while (n > 0) {
             n--;
             char ch = (char) (n % 26 + 'A');
             n /= 26;

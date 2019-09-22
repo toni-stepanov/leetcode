@@ -75,21 +75,17 @@ public class Solution {
 
     // Good solution
     // https://discuss.leetcode.com/topic/7876/my-clean-java-solution
-    public String fractionToDecimal(int numerator, int denominator) {
+    String fractionToDecimal(int numerator, int denominator) {
         if (numerator == 0) return "0";
         String sign = ( (numerator > 0) ^ (denominator > 0) ) ? "-" : "";
-
         long n = Math.abs((long) numerator);
         long d = Math.abs((long) denominator);
-
         StringBuilder result = new StringBuilder();
         result.append(sign);
-
         // add integral part
         result.append(n/d);
         n %=d;
         if (n == 0) return result.toString();
-
         // add fractional part
         result.append(".");
         HashMap<Long, Integer> map = new HashMap<>(); // Map<remainder, position in string builder>

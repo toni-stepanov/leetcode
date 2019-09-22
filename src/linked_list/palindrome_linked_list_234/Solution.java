@@ -13,15 +13,15 @@ Could you do it in O(n) time and O(1) space?
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) { val = x; }
  * }
  */
 public class Solution {
     boolean isPalindrome(ListNode head) {
-        ListNode p1 = null, p2=head, p3=head;
-        while(p3 != null && p3.next != null) {
+        ListNode p1 = null, p2 = head, p3 = head;
+        while (p3 != null && p3.next != null) {
             p3 = p3.next.next;
             ListNode t = p2.next;
             p2.next = p1;

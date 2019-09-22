@@ -48,11 +48,7 @@ public class Solution {
                 return false;
             }
         }
-        if (map.size() == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return map.size() == 0;
     }
 
     public boolean isAnagram2(String s, String t) {
@@ -73,7 +69,7 @@ public class Solution {
             }
             else return false;
         }
-        return map.keySet().size() == 0 ? true : false;
+        return map.keySet().size() == 0;
     }
 }
 

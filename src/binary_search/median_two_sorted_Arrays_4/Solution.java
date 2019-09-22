@@ -49,26 +49,25 @@ class Solution {
         if (nums2.length == 0) return getMedian(nums1);
         if (nums1.length > nums2.length) return findMedianSortedArrays(nums2, nums1);
         int m = nums1.length, n = nums2.length;
-        int[] A = nums1, B = nums2;
         int half = (m + n + 1)/2; // so j == half - i
         int iMin = 0, iMax = m;
         while (iMin <= iMax) {
             int i = iMin + (iMax - iMin)/2;
             int j = half - i;
-            if (i < m && B[j-1] > A[i] ) { //should be B[j-1] <= A[i], if B[j-1]>A[i] => i is too small
+            if (i < m && nums2[j-1] > nums1[i] ) { //should be B[j-1] <= A[i], if B[j-1]>A[i] => i is too small
                 iMin = i + 1;
-            } else if (i > 0 && A[i-1] > B[j]) {// should be  A[i-1] <= B[j], if  A[i-1] > B[j] => i is too big
+            } else if (i > 0 && nums1[i-1] > nums2[j]) {// should be  A[i-1] <= B[j], if  A[i-1] > B[j] => i is too big
                 iMax = i - 1;
             } else {
                 int maxLeft;
-                if (i == 0) maxLeft = B[j-1];
-                else if (j == 0) maxLeft = A[i-1];
-                else maxLeft = Math.max(A[i-1], B[j-1]);
+                if (i == 0) maxLeft = nums2[j-1];
+                else if (j == 0) maxLeft = nums1[i-1];
+                else maxLeft = Math.max(nums1[i-1], nums2[j-1]);
                 if ((n+m)%2 == 1) return maxLeft;
                 int minRight;
-                if (i == m) minRight = B[j];
-                else if (j == n) minRight = A[i];
-                else minRight = Math.min(A[i], B[j]);
+                if (i == m) minRight = nums2[j];
+                else if (j == n) minRight = nums1[i];
+                else minRight = Math.min(nums1[i], nums2[j]);
                 return (maxLeft + minRight)/2.0;
             }
         }

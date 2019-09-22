@@ -9,7 +9,7 @@ https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 
 Given a digit string, return all possible letter combinations that the number could represent.
 */
-// Solution with no recursion
+// SnapshotArray with no recursion
 // https://discuss.leetcode.com/topic/8465/my-java-solution-with-fifo-queue
 public class Solution {
     private final static String[] digitsToChars = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};

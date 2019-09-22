@@ -51,7 +51,7 @@ public class Solution {
 
     // Good solution
     // https://discuss.leetcode.com/topic/13698/short-ac-solution-in-java-with-explanation/2
-    public String addBinary(String a, String b) {
+    String addBinary(String a, String b) {
         if (a.length()==0 && b.length()==0) return "";
         StringBuilder result = new StringBuilder();
         int i=a.length()-1, j=b.length()-1, remainder=0;

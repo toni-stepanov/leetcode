@@ -19,36 +19,53 @@ Try to do this in one pass.
 /**
  * Definition for singly-linked list.
  * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
+ * int val;
+ * ListNode next;
+ * ListNode(int x) { val = x; }
  * }
  */
 public class Solution {
-    // two pointers solution with n-diff between pointers.
-    // https://discuss.leetcode.com/topic/7753/c-solution-easy-to-understand-with-explanations/2
-    // https://discuss.leetcode.com/topic/7031/simple-java-solution-in-one-pass
+
+    // https://leetcode.com/problems/remove-nth-node-from-end-of-list/solution/
     ListNode removeNthFromEnd(ListNode head, int n) {
-        if (head == null) return null;
-        // we need this for case when n=len => going to remove the head.
-        ListNode fakeHead = new ListNode(0);
-        fakeHead.next = head;
-
-        ListNode fast = fakeHead;
-        ListNode slow = fakeHead;
-
-        for (int i=0; i<n; i++) {
-            fast = fast.next;
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        int length = 0;
+        ListNode first = head;
+        while (first != null) {
+            length++;
+            first = first.next;
         }
-        // we should stop fast at the last element, in such case slow will be the item before target.
-        while (fast.next != null) {
-            fast = fast.next;
-            slow = slow.next;
+        length -= n;
+        first = dummy;
+        while (length > 0) {
+            length--;
+            first = first.next;
         }
-        // slow - item before target
-        // slow.next - target
-        // slow.next.next - just after target, is null if target ia the last item in the list.
-        slow.next = slow.next.next;
-        return fakeHead.next;
+        first.next = first.next.next;
+        return dummy.next;
+    }
+
+//    one pass
+//    Time complexity : O(L)O(L).
+//    The algorithm makes one traversal of the list of LL nodes. Therefore time complexity is O(L)O(L).
+//    Space complexity : O(1)O(1).
+//    We only used constant extra space.
+    ListNode removeNthFromEnd2(ListNode head, int n) {
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode first = dummy;
+        ListNode second = dummy;
+        // Advances first pointer so that the gap between first and second is n nodes apart
+        for (int i = 1; i <= n + 1; i++) {
+            first = first.next;
+        }
+        // Move first to the end, maintaining the gap
+        while (first != null) {
+            first = first.next;
+            second = second.next;
+        }
+        second.next = second.next.next;
+        return dummy.next;
     }
 }

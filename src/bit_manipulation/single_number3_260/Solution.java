@@ -23,7 +23,7 @@ public class Solution {
 
     // space complexity is not constant
     int[] singleNumber2(int[] nums) {
-        Set<Integer> s = new HashSet<Integer>();
+        Set<Integer> s = new HashSet<>();
         for(int num : nums){
             if(!s.add(num)){
                 s.remove(num);
@@ -42,9 +42,8 @@ public class Solution {
         }
         // Get its last set bit
         diff &= -diff;
-
         // Pass 2 :
-        int[] rets = {0, 0}; // this array stores the two numbers we will return
+        int[] rets = new int[2]; // this array stores the two numbers we will return
         for (int num : nums)
         {
             if ((num & diff) == 0) // the bit is not set

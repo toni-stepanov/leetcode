@@ -14,7 +14,7 @@ package array.min_rotated_array_153;
  */
 
 class Solution {
-    public int findMin(int[] nums) {
+    int findMin(int[] nums) {
         return findMin(nums, 0, nums.length -1);
     }
 

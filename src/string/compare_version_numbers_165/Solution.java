@@ -1,6 +1,7 @@
 package string.compare_version_numbers_165;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /*
@@ -20,7 +21,7 @@ Here is an example of version numbers ordering:
 0.1 < 1.1 < 1.2 < 13.37
 */
 public class Solution {
-    public int compareVersion(String version1, String version2) {
+    public int compareVersion2(String version1, String version2) {
         List<Integer> arr1 = parse(version1);
         List<Integer> arr2 = parse(version2);
         int i=0, j=0;
@@ -46,11 +47,10 @@ public class Solution {
     }
 
     // https://discuss.leetcode.com/topic/6238/accepted-small-java-solution
-    int compareVersion1(String version1, String version2) {
+    int compareVersion(String version1, String version2) {
         String[] arr1 =  version1.split("\\.");
         String[] arr2 =  version2.split("\\.");
         int len = Math.max(arr1.length, arr2.length);
-
         for (int i=0; i<len; i++) {
             Integer v1 = (i >= arr1.length) ? 0 : Integer.parseInt(arr1[i]);
             Integer v2 =(i >= arr2.length) ? 0 : Integer.parseInt(arr2[i]);

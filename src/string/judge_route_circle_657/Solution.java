@@ -24,7 +24,7 @@ Output: false
 class Solution {
     private final Map<Character, int[]> map = new HashMap<>();
 
-    public Solution() {
+    Solution() {
         map.put('U', new int[]{0, 1});
         map.put('R', new int[]{1, 0});
         map.put('D', new int[]{0, -1});

@@ -29,7 +29,7 @@ Given a roman numeral, convert it to an integer. Input is guaranteed to be withi
 */
 class Solution {
 
-    public int romanToInt(String s) {
+    int romanToInt(String s) {
         int result = 0, current, next;
         char[] symbols = s.toCharArray();
         for (int i = 0; i < symbols.length; i++) {

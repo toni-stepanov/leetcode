@@ -20,9 +20,6 @@ c) Replace a character
 // https://discuss.leetcode.com/topic/17639/20ms-detailed-explained-c-solutions-o-n-space
 public class Solution {
 
-
-
-
 //    https://leetcode.com/problems/edit-distance/discuss/25846/20ms-detailed-explained-c-solutions-on-space
 //    If they are not equal, we need to consider three cases:
 //    Replace word1[i - 1] by word2[j - 1] (dp[i][j] = dp[i - 1][j - 1] + 1 (for replacement));

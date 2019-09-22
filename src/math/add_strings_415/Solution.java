@@ -20,12 +20,12 @@ public class Solution {
         }
         int carry = 0;
         StringBuilder result = new StringBuilder();
-        for(int i = num1.length() - 1, j = num2.length() - 1; i >= 0 || j >=0; i--, j--) {
+        for (int i = num1.length() - 1, j = num2.length() - 1; i >= 0 || j >= 0; i--, j--) {
             int n1 = (i >= 0) ? num1.charAt(i) - '0' : 0;
             int n2 = (j >= 0) ? num2.charAt(j) - '0' : 0;
             int sum = n1 + n2 + carry;
-            result.insert(0, sum%10);
-            carry = sum/10;
+            result.insert(0, sum % 10);
+            carry = sum / 10;
         }
         if (carry > 0) result.insert(0, carry);
         return result.toString();

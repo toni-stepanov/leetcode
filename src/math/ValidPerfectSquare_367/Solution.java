@@ -19,7 +19,7 @@ Returns: False
 */
 public class Solution {
     // binary search approach - version 1
-    public boolean isPerfectSquare(int num) {
+    boolean isPerfectSquare(int num) {
         if (num == 0 || num == 1) return true;
         int lo = 0;
         int hi = num;

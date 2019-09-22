@@ -35,7 +35,7 @@ public class Codec {
     }
 
 
-    // Solution2
+    // SnapshotArray
     // Great solution and explanation
     //https://discuss.leetcode.com/topic/81637/two-solutions-and-thoughts
     // https://discuss.leetcode.com/topic/81637/two-solutions-and-thoughts/3
@@ -46,7 +46,7 @@ public class Codec {
     int KEY_LEN = 6;
 
     // Encodes a URL to a shortened URL.
-    public String encode(String longUrl) {
+    String encode(String longUrl) {
         if (longToShort.containsKey(longUrl)) return longToShort.get(longUrl);
         String key = generateKey();
         longToShort.put(longUrl, key);
@@ -55,14 +55,14 @@ public class Codec {
     }
 
     // Decodes a shortened URL to its original URL.
-    public String decode(String shortUrl) {
+    String decode(String shortUrl) {
         if (!shortToLong.containsKey(shortUrl)) return "";
         return shortToLong.get(shortUrl);
     }
 
     private String generateKey() {
         StringBuilder sb = new StringBuilder();
-        for (int i=0; i<KEY_LEN; i++) {
+        for (int i = 0; i < KEY_LEN; i++) {
             int nextCharIndex = rnd.nextInt(source.length());
             sb.append(source.charAt(nextCharIndex));
         }

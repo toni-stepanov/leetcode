@@ -19,7 +19,7 @@ public class Solution {
     // http://e-maxx.ru/algo/palindromes_count
     // http://www.geeksforgeeks.org/longest-palindromic-substring-set-2/
     // https://discuss.leetcode.com/topic/23498/very-simple-clean-java-solution
-    public String longestPalindrome(String s) {
+    String longestPalindrome(String s) {
         if (s == null || s.length() <= 1) return s;
         int start = 0, end = 0;
         for (int i=1; i<s.length(); i++) {
