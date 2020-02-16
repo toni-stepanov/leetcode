@@ -12,21 +12,21 @@ class ShortestPathInDigraph {
     private boolean[] marked;
     private int[] edgeTo;
 
-    ShortestPathInDigraph(Digraph G, int startVertex) {
-        marked = new boolean[G.size()];
-        edgeTo = new int[G.size()];
-        for (int i=0; i<G.size(); i++) {
+    ShortestPathInDigraph(Digraph digraph, int startVertex) {
+        marked = new boolean[digraph.size()];
+        edgeTo = new int[digraph.size()];
+        for (int i = 0; i < digraph.size(); i++) {
             edgeTo[i] = -1;
         }
-        digraph = G;
-        bfs(digraph, startVertex);
+        this.digraph = digraph;
+        bfs(this.digraph, startVertex);
     }
 
     // Multiple-source shortest path.
     ShortestPathInDigraph(Digraph G, List<Integer> startVertices) {
         marked = new boolean[G.size()];
         edgeTo = new int[G.size()];
-        for (int i=0; i<G.size(); i++) {
+        for (int i = 0; i < G.size(); i++) {
             edgeTo[i] = -1;
         }
         digraph = G;
@@ -42,7 +42,7 @@ class ShortestPathInDigraph {
 
     private void bfs(Digraph g, List<Integer> startVertices) {
         Queue<Integer> q = new LinkedList<>();
-        for(Integer i : startVertices) {
+        for (Integer i : startVertices) {
             q.add(i);
             marked[i] = true;
         }

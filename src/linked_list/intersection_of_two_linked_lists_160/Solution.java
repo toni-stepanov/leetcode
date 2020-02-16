@@ -65,7 +65,7 @@ public class Solution {
         return big;
     }
 
-    int getLength(ListNode node) {
+    private int getLength(ListNode node) {
         int counter = 0;
         while (node != null) {
             counter++;

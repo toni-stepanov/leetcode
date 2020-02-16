@@ -21,6 +21,7 @@ Output: 7 -> 0 -> 8
  * }
  */
 public class Solution {
+
     ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1 == null) return l2;
         if (l2 == null) return l1;
@@ -39,4 +40,5 @@ public class Solution {
         }
         return beforeHead.next;
     }
+
 }

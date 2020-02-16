@@ -15,6 +15,7 @@ Sort a linked list using insertion sort.
  *     ListNode(int x) { val = x; }
  * }
  */
+@SuppressWarnings("Duplicates")
 public class Solution {
 
 

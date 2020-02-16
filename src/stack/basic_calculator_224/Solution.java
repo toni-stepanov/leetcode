@@ -21,6 +21,7 @@ Note: Do not use the eval built-in library function.
 */
 
 class Solution {
+
     // https://discuss.leetcode.com/topic/33044/java-easy-version-to-understand
     public int calculate(String s) {
         if (s == null) throw new IllegalArgumentException("ex");

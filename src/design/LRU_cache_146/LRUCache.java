@@ -58,7 +58,6 @@ public class LRUCache {
     public int remove(int key) {
         CacheItem item = map.get(key);
         removeFromLinkedList(item);
-
         map.remove(key);
         return item.value;
     }

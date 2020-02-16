@@ -11,6 +11,7 @@ package design.trie_208;
  */
 // Great solution with array instead of hashtable.
 // https://discuss.leetcode.com/topic/19221/ac-java-solution-simple-using-single-array/2
+@SuppressWarnings("Duplicates")
 public class Trie {
     private TrieNode root;
 
@@ -22,7 +23,7 @@ public class Trie {
     // Time complexity O(word.len)
     public void insert(String word) {
         TrieNode curr = root;
-        for (int i=0; i<word.length(); i++) {
+        for (int i = 0; i < word.length(); i++) {
             char c = word.charAt(i);
             if (!curr.children.containsKey(c)) {
                 curr.children.put(c, new TrieNode(c));
@@ -32,7 +33,6 @@ public class Trie {
         curr.hasInfo = true;
     }
 
-    @SuppressWarnings("all")
     // Returns if the word is in the trie.
     // Time complexity O(word.len)
     public boolean search(String word) {
@@ -45,13 +45,12 @@ public class Trie {
         return curr.hasInfo;
     }
 
-    @SuppressWarnings("all")
     // Returns if there is any word in the trie
-    // that starts with the given prefix.
-    // Time complexity O(prefix.len)
+        // that starts with the given prefix.
+        // Time complexity O(prefix.len)
     boolean startsWith(String prefix) {
         TrieNode curr = root;
-        for (int i=0; i<prefix.length(); i++) {
+        for (int i = 0; i < prefix.length(); i++) {
             char c = prefix.charAt(i);
             if (!curr.children.containsKey(c)) return false;
             curr = curr.children.get(c);

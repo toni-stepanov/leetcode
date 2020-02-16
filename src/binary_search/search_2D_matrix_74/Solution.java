@@ -30,28 +30,28 @@ public class Solution {
             return false;
         }
         int m = matrix.length;
-        int n= matrix[0].length;
-        if (target < matrix[0][0] || target > matrix[m-1][n-1]) {
+        int n = matrix[0].length;
+        if (target < matrix[0][0] || target > matrix[m - 1][n - 1]) {
             return false;
         }
         int lo = 0;
-        int hi = m-1;
+        int hi = m - 1;
         while (lo <= hi) {
-            int mid = lo + (hi - lo)/2;
-            if (target >= matrix[mid][0] && target <= matrix[mid][n-1]) {
+            int mid = lo + (hi - lo) / 2;
+            if (target >= matrix[mid][0] && target <= matrix[mid][n - 1]) {
                 return bs(matrix[mid], target);
             }
-            if (target < matrix[mid][0]) hi = mid-1;
-            else if (target > matrix[mid][n-1]) lo = mid+1;
+            if (target < matrix[mid][0]) hi = mid - 1;
+            else if (target > matrix[mid][n - 1]) lo = mid + 1;
         }
         return false;
     }
 
     private boolean bs(int[] array, int target) {
         int lo = 0;
-        int hi = array.length-1;
+        int hi = array.length - 1;
         while (lo <= hi) {
-            int mid = lo + (hi - lo)/2;
+            int mid = lo + (hi - lo) / 2;
             if (array[mid] == target) return true;
             if (target < array[mid]) hi = mid - 1;
             else if (target > array[mid]) lo = mid + 1;
@@ -65,10 +65,10 @@ public class Solution {
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) return false;
         int row_num = matrix.length;
         int col_num = matrix[0].length;
-        int l = 0, r = row_num * col_num -1;
-        while (l<=r) {
-            int mid = l + (r - l)/2;
-            int curr = matrix[mid/col_num][mid%col_num];
+        int l = 0, r = row_num * col_num - 1;
+        while (l <= r) {
+            int mid = l + (r - l) / 2;
+            int curr = matrix[mid / col_num][mid % col_num];
             if (curr == target) return true;
             if (curr < target) l = mid + 1;
             else r = mid - 1;

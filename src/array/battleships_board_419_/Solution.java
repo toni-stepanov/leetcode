@@ -44,7 +44,7 @@ public class Solution {
         return sum;
     }
 
-    boolean isShipStart(int row, int col, char[][] board) {
+    private boolean isShipStart(int row, int col, char[][] board) {
         if (board[row][col] != 'X') return false;
         return (row == 0 || board[row - 1][col] != 'X') && (col == 0 || board[row][col - 1] != 'X');
     }

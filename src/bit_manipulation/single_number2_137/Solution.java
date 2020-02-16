@@ -10,6 +10,7 @@ Note:
 Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
 */
 public class Solution {
+
     int singleNumber(int[] nums) {
         int ret = 0;
         for (int i = 0; i < 32; i++) {
@@ -26,4 +27,5 @@ public class Solution {
         }
         return ret;
     }
+    
 }

@@ -11,6 +11,7 @@ Given n = 2, return 91. (The answer should be the total numbers in the range of 
 excluding [11,22,33,44,55,66,77,88,99])
 */
 public class Solution {
+
     public int countNumbersWithUniqueDigits1(int n) {
         if(n == 0) return 1;
         if (n>10) n = 10;

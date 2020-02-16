@@ -14,6 +14,7 @@ Both num1 and num2 does not contain any leading zero.
 You must not use any built-in BigInteger library or convert the inputs to integer directly.
 */
 public class Solution {
+
     String addStrings(String num1, String num2) {
         if (num1 == null || num2 == null) {
             throw new IllegalArgumentException("num1 and num2 should not be null");
@@ -30,4 +31,5 @@ public class Solution {
         if (carry > 0) result.insert(0, carry);
         return result.toString();
     }
+
 }

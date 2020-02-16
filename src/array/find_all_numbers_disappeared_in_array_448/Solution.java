@@ -22,6 +22,7 @@ import java.util.List;
  * [5,6]
  */
 public class Solution {
+
     List<Integer> findDisappearedNumbers(int[] nums) {
         List<Integer> res = new ArrayList<>();
         if (nums == null || nums.length == 0) return res;
@@ -34,4 +35,5 @@ public class Solution {
         }
         return res;
     }
+
 }

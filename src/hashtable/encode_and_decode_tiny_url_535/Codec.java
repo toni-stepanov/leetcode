@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Random;
 
 public class Codec {
-    int counter = 0;
+    private int counter = 0;
     private HashMap<String, String> map = new HashMap<>();
 
     // Encodes a URL to a shortened URL.
@@ -39,11 +39,9 @@ public class Codec {
     // Great solution and explanation
     //https://discuss.leetcode.com/topic/81637/two-solutions-and-thoughts
     // https://discuss.leetcode.com/topic/81637/two-solutions-and-thoughts/3
-    Map<String, String> longToShort = new HashMap<>();
-    Map<String, String> shortToLong = new HashMap<>();
-    String source = "ABCDEFGHIJKLMNOPQRSTUWXYZabcdefghijklmnopqrstuwxyz0123456789";
-    Random rnd = new Random();
-    int KEY_LEN = 6;
+    private Map<String, String> longToShort = new HashMap<>();
+    private Map<String, String> shortToLong = new HashMap<>();
+    private Random rnd = new Random();
 
     // Encodes a URL to a shortened URL.
     String encode(String longUrl) {
@@ -62,7 +60,9 @@ public class Codec {
 
     private String generateKey() {
         StringBuilder sb = new StringBuilder();
+        int KEY_LEN = 6;
         for (int i = 0; i < KEY_LEN; i++) {
+            String source = "ABCDEFGHIJKLMNOPQRSTUWXYZabcdefghijklmnopqrstuwxyz0123456789";
             int nextCharIndex = rnd.nextInt(source.length());
             sb.append(source.charAt(nextCharIndex));
         }

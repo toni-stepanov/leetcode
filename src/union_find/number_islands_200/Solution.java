@@ -25,6 +25,7 @@ Example 2:
 00011
 */
 public class Solution {
+
     // Good solution
     // https://discuss.leetcode.com/topic/13248/very-concise-java-ac-solution
     // Good union-find solution
@@ -60,4 +61,5 @@ public class Solution {
         destroyIsland(i, j - 1, grid);
         destroyIsland(i, j + 1, grid);
     }
+
 }

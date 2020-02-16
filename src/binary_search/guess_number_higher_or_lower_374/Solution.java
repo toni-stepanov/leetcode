@@ -28,15 +28,15 @@ Return 6.
 
 public class Solution {
     int guessNumber(int n) {
-        int lo=1;
-        int hi=n;
-        while (lo<hi) {
-            int mid = lo + (hi-lo)/2;
+        int lo = 1;
+        int hi = n;
+        while (lo < hi) {
+            int mid = lo + (hi - lo) / 2;
             int g = guess(mid);
-            if (g>0) {
-                lo = mid+1;
-            } else if (g<0) {
-                hi = mid-1;
+            if (g > 0) {
+                lo = mid + 1;
+            } else if (g < 0) {
+                hi = mid - 1;
             } else {
                 return mid;
             }

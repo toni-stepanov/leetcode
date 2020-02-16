@@ -1,19 +1,16 @@
 package array.domino_equal_row_1007;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * 1007. Minimum Domino Rotations For Equal Row
  * https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/
- In a row of dominoes, A[i] and B[i] represent the top and bottom halves of the i-th domino.  (A domino is a tile with
- two numbers from 1 to 6 - one on each half of the tile.)
-
- We may rotate the i-th domino, so that A[i] and B[i] swap values.
-
- Return the minimum number of rotations so that all the values in A are the same, or all the values in B are the same.
-
- If it cannot be done, return -1.
+ * In a row of dominoes, A[i] and B[i] represent the top and bottom halves of the i-th domino.  (A domino is a tile with
+ * two numbers from 1 to 6 - one on each half of the tile.)
+ * <p>
+ * We may rotate the i-th domino, so that A[i] and B[i] swap values.
+ * <p>
+ * Return the minimum number of rotations so that all the values in A are the same, or all the values in B are the same.
+ * <p>
+ * If it cannot be done, return -1.
  */
 
 class Solution {

@@ -10,7 +10,7 @@ Given an integer, write a function to determine if it is a power of two.
 public class Solution {
     // Iterative solution
     // Time complexity O(log n)
-    public boolean isPowerOfTwo1(int n) {
+    boolean isPowerOfTwo1(int n) {
         while (n % 2 == 0 && n > 1) {
             n /= 2;
         }
@@ -28,7 +28,7 @@ public class Solution {
     }
 
     // Bit operation x&(~x+1) trick
-    public boolean isPowerOfTwo(int n) {
+    boolean isPowerOfTwo(int n) {
         return (n > 0) && ((n&(~n+1)) == n);
     }
 }

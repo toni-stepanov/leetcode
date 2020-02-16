@@ -42,6 +42,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 class Solution {
+
     public List<int[]> getSkyline1(int[][] buildings) {
         List<int[]> res = new ArrayList<>();
         if (buildings == null || buildings.length == 0) return res;

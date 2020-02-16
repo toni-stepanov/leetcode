@@ -64,7 +64,6 @@ public class Solution {
             if (!visited[v]) visit(v);
             if (!visited[w]) visit(w);
         }
-
         return sum;
     }
 

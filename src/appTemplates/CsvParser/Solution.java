@@ -8,9 +8,9 @@ import java.util.Scanner;
     Parse csv file. Each row has int priority in the first column and the title in the second.
  */
 public class Solution {
-    private final String path = "C:\\GitHub\\LeetCode\\src\\LeetCode\\appTemplates\\CsvParser\\data.csv";
 
-    public void parseData() {
+    void parseData() {
+        String path = "C:\\GitHub\\LeetCode\\src\\LeetCode\\appTemplates\\CsvParser\\data.csv";
         try {
             Scanner scanner = new Scanner(new File(path));
             while (scanner.hasNext()) {

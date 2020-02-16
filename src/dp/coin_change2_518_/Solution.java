@@ -58,7 +58,7 @@ public class Solution {
 
     // Complexity - time O(m*n), space O(m), m - amount, n - coins.length
     // https://discuss.leetcode.com/topic/79071/knapsack-problem-java-solution-with-thinking-process-o-nm-time-and-o-m-space
-    public int change(int amount, int[] coins) {
+    int change(int amount, int[] coins) {
         int[] memo = new int[amount+1];
         memo[0] = 1;
         for(int coin : coins) {

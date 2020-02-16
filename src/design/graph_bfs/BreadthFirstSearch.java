@@ -10,7 +10,7 @@ class BreadthFirstSearch {
     private boolean[] marked; // all items false by default
     private int[] edgeTo; // contains parentId of each the node
     private Graph graph;
-    private LinkedList items;
+    private LinkedList<Integer> items;
 
     BreadthFirstSearch(Graph g, int startVertex, int size) {
         marked = new boolean[size];
@@ -28,7 +28,7 @@ class BreadthFirstSearch {
     }
 
     Iterable<Integer> getPath(int endVertex) {
-        LinkedList path = new LinkedList();
+        LinkedList<Integer> path = new LinkedList<>();
         int curr = endVertex;
         while (curr > -1) {
             path.add(curr);
@@ -37,8 +37,8 @@ class BreadthFirstSearch {
         return path;
     }
 
-    private LinkedList bfs(int start) {
-        LinkedList result = new LinkedList();
+    private LinkedList<Integer> bfs(int start) {
+        LinkedList<Integer> result = new LinkedList<>();
         Queue<Integer> queue = new LinkedList<>();
         marked[start] = true;
         result.add(start);

@@ -23,13 +23,13 @@ Explanation:
        ↑   ↑
 */
 public class Solution {
-//    // Integer.bitCount(x ^ y);
+    //    // Integer.bitCount(x ^ y);
 //    // https://discuss.leetcode.com/topic/72093/java-1-line-solution-d/2
 //    // https://discuss.leetcode.com/topic/72089/java-3-line-solution
     int hammingDistance(int x, int y) {
         int count = 0;
-        while (x!=0 || y != 0) {
-            count += (x&1) ^ (y&1);
+        while (x != 0 || y != 0) {
+            count += (x & 1) ^ (y & 1);
             x >>>= 1;
             y >>>= 1;
         }

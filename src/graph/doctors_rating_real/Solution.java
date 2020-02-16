@@ -9,7 +9,9 @@ Search doctors recursively among relative-of-relative doctors.
 Order in the result set is no matter, N most rated doctors.
 If N>total amount of doctors - print all you can found except given.
 */
+@SuppressWarnings("Duplicates")
 public class Solution {
+    
     List<Doctor> getTopDoctorsBFS(Doctor doctor, int topCounter) {
         List<Doctor> result = new ArrayList<>();
         if (doctor == null || doctor.relatedDoctors == null || doctor.relatedDoctors.size() == 0) {

@@ -24,6 +24,7 @@ import java.util.List;
  * ]
  */
 class Solution {
+
     List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> res = new ArrayList<>();
         if (nums == null || nums.length < 4) return res;
@@ -58,4 +59,5 @@ class Solution {
         }
         return res;
     }
+
 }
